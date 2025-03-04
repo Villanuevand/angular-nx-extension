@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "build:apps": "nx run-many --target=build --configuration=production --all"
+    "build:apps": "nx run-many --target=build --configuration=production --all",
+    "run:apps": "nx run-many --target=run --configuration=production --all",
+    "postbuild:apps": "nx affected --target=postbuild"
   },
   "private": true,
   "dependencies": {

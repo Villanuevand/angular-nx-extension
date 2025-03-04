@@ -54,6 +54,13 @@
       },
       "defaultConfiguration": "production"
     },
+    "postbuild": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "node scripts/post-build.js"
+      },
+      "dependsOn": ["build"]
+    },
     "serve": {
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
