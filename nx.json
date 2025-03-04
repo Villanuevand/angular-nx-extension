@@ -18,7 +18,7 @@
   "targetDefaults": {
     "@angular-devkit/build-angular:application": {
       "cache": true,
-      "dependsOn": ["^build"],
+      "dependsOn": ["^build", "postbuild"],
       "inputs": ["production", "^production"]
     },
     "@nx/eslint:lint": {
