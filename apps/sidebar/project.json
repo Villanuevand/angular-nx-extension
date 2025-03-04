@@ -7,12 +7,12 @@
   "tags": [],
   "targets": {
     "build": {
-      "executor": "@angular-devkit/build-angular:application",
+      "executor": "@angular-devkit/build-angular:browser",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/sidebar",
         "index": "apps/sidebar/src/index.html",
-        "browser": "apps/sidebar/src/main.ts",
+        "main": "apps/sidebar/src/main.ts",
         "polyfills": ["zone.js"],
         "tsConfig": "apps/sidebar/tsconfig.app.json",
         "assets": [
@@ -80,7 +80,7 @@
       "executor": "@nx/web:file-server",
       "options": {
         "buildTarget": "sidebar:build",
-        "staticFilePath": "dist/apps/sidebar/browser",
+        "staticFilePath": "dist/apps/sidebar",
         "spa": true
       }
     }

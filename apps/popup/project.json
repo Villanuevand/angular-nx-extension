@@ -7,18 +7,24 @@
   "tags": [],
   "targets": {
     "build": {
-      "executor": "@angular-devkit/build-angular:application",
+      "executor": "@angular-devkit/build-angular:browser",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/popup",
         "index": "apps/popup/src/index.html",
-        "browser": "apps/popup/src/main.ts",
+        "main": "apps/popup/src/main.ts",
         "polyfills": ["zone.js"],
         "tsConfig": "apps/popup/tsconfig.app.json",
         "assets": [
           {
             "glob": "**/*",
-            "input": "apps/popup/public"
+            "input": "apps/popup/public",
+            "output": "/"
+          },
+          {
+            "glob": "manifest.json",
+            "input": "apps/popup/public",
+            "output": "/"
           }
         ],
         "styles": ["apps/popup/src/styles.css"],
@@ -80,7 +86,7 @@
       "executor": "@nx/web:file-server",
       "options": {
         "buildTarget": "popup:build",
-        "staticFilePath": "dist/apps/popup/browser",
+        "staticFilePath": "dist/apps/popup",
         "spa": true
       }
     }

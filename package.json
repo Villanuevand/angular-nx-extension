@@ -2,7 +2,9 @@
   "name": "@angular-nx-extension/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build:apps": "nx run-many --target=build --configuration=production --all"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~19.1.0",
