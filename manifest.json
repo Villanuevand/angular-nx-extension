@@ -1,3 +1,16 @@
 {
-    "test": "test"
+  "manifest_version": 3,
+  "name": "Angular + Nx + Chrome Extensions",
+  "description": "This is a sample project for Angular + Nx + Chrome Extensions",
+  "version": "1.0",
+  "action": {
+    "default_popup": "popup/index.html"
+  },
+  "side_panel": {
+    "default_path": "sidebar/index.html"
+  },
+  "options_ui": {
+    "page": "options/index.html",
+    "open_in_tab": true
+  }
 }
